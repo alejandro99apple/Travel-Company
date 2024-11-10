@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation</title>
+    <link rel="icon" type="image/x-icon" href="./img/title.svg">
+</head>
+<body>
+<link rel="stylesheet" href="styles.css">
+
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="./img/plane.svg" width="30" height="30" alt="Logo">
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact us</a>
+    </div>
+    <div class="search-section">
+        <input type="text" id="searchInput" placeholder="Search recommendations...">
+        <button id="searchBtn">Search</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+</nav>
+
+
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <h1 class="hero-title">Discover Your Next Adventure</h1>
+    <p class="hero-subtitle">Explore unique destinations and create unforgettable memories</p>
+    
+    <div class="features-container">
+        <div class="feature-card">
+            <img src="./img/Popular Destinations.svg" alt="Popular Destinations" width="60" height="60">
+            <h3>Popular Destinations</h3>
+            <p>Find the most visited and highly rated places</p>
+        </div>
+        
+        <div class="feature-card">
+            <img src="./img/offers.svg" alt="Offers" width="60" height="60">
+            <h3>Special Offers</h3>
+            <p>The best rates for your next trip</p>
+        </div>
+        
+        <div class="feature-card">
+            <img src="./img/travel guide.svg" alt="Guide" width="60" height="60">
+            <h3>Travel Guide</h3>
+            <p>Tips and recommendations for travelers</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- About Us Section (initially hidden) -->
+<div id="aboutSection" style="display: none;">
+    <div class="hero-section">
+        <h1 class="hero-title" style="margin-bottom: 10px;">About Us</h1>
+        <p class="hero-subtitle" style="margin-bottom: 20px;">Your Trusted Travel Companion</p>
+        
+        <div class="about-description" style="background: rgba(255,255,255,0.8); padding: 25px; border-radius: 10px; margin-bottom: 25px;">
+            <p style="color: #333; line-height: 1.5; font-size: 1.2em; margin: 0;">
+                We are a leading travel recommendation company dedicated to creating unique and memorable experiences for travelers worldwide. With over 10 years of experience in the tourism industry, we specialize in connecting people with extraordinary destinations, offering personalized recommendations based on their preferences and interests.
+            </p>
+        </div>
+
+        <h2 style="color: white; margin-bottom: 20px;">Our Leadership</h2>
+        <div class="leadership-container" style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;">
+            <div class="leader-card">
+                <img src="./img/ceo.jpg" alt="CEO" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid #8B4513;">
+                <h3 style="color: white; margin: 10px 0 5px;">John Smith</h3>
+                <p style="color: #ddd; margin: 0;">CEO & Founder</p>
+            </div>
+            
+            <div class="leader-card">
+                <img src="./img/cto.jpg" alt="CTO" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid #8B4513;">
+                <h3 style="color: white; margin: 10px 0 5px;">Sarah Johnson</h3>
+                <p style="color: #ddd; margin: 0;">CTO</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Contact Us Section (initially hidden) -->
+<div id="contactSection" style="display: none;">
+    <div class="hero-section">
+        <h1 class="hero-title">Contact Us</h1>
+        <p class="hero-subtitle">We're here to help</p>
+        
+        <div class="contact-container">
+            <div class="contact-form-container">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Name:</label>
+                        <input class="form-input" type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email:</label>
+                        <input class="form-input" type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message:</label>
+                        <textarea class="form-textarea" id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button class="submit-button" type="button" onclick="validateForm()">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="contact-info-container">
+                <h3 class="contact-info-title">Contact Information</h3>
+                
+                <div class="contact-info-item">
+                    <img class="contact-info-icon" src="./img/email.svg" alt="Email" width="20" height="20">
+                    <span class="contact-info-text">info@travelrecommendation.com</span>
+                </div>
+                
+                <div class="contact-info-item">
+                    <img class="contact-info-icon" src="./img/phone.svg" alt="Phone" width="20" height="20">
+                    <span class="contact-info-text">+34 123 456 789</span>
+                </div>
+                
+                <div class="contact-info-item">
+                    <img class="contact-info-icon" src="./img/location.svg" alt="Location" width="20" height="20">
+                    <span class="contact-info-text">Madrid, Spain</span>
+                </div>
+                
+                <hr class="contact-divider">
+                
+                <h4 class="schedule-title">Business Hours</h4>
+                <p class="schedule-text">Monday to Friday: 9:00 AM - 6:00 PM</p>
+                <p class="schedule-text">Saturday: 10:00 AM - 2:00 PM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Social Icons -->
+<div class="social-icons">
+    <a href="https://github.com/alejandro99apple" class="social-icon">
+        <img src="./img/github.svg" alt="Instagram" width="25" height="25">
+    </a>
+    <a href="https://www.linkedin.com/in/alejandro-díaz-montes-de-oca-9a3005337" class="social-icon">
+        <img src="./img/linkedin.svg" alt="X" width="25" height="25">
+    </a>
+</div>
+
+
+<script src="travel_recommendation.js"></script>
+</body>
+</html>
